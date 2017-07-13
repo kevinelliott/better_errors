@@ -17,6 +17,7 @@ module BetterErrors
     { symbols: [:macvim, :mvim],        sniff: /vim/i,   url: proc { |file, line| "mvim://open?url=file://#{file}&line=#{line}" } },
     { symbols: [:sublime, :subl, :st],  sniff: /subl/i,  url: "subl://open?url=file://%{file}&line=%{line}" },
     { symbols: [:textmate, :txmt, :tm], sniff: /mate/i,  url: "txmt://open?url=file://%{file}&line=%{line}" },
+    { symbols: [:vscode, :vsc],         sniff: /vsc/i,   url: "vscode://%{file}:%{line}" },
   ]
 
   class << self
